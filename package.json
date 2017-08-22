@@ -1,0 +1,13 @@
+{
+  "name": "web-site",
+  "version": "1.0.0",
+  "description": "Official web site for HappinessLab",
+  "main": "index.js",
+  "repository": "git@hplab.work:HappinessLab/web-site.git",
+  "author": "Shota Shimazu <hornet.live.mf@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.3"
+  }
+}
