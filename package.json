@@ -8,6 +8,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "node-sass": "^4.5.3",
-    "pug": "^2.0.0-rc.3"
+    "pug": "^2.0.0-rc.3",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
