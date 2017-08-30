@@ -5,21 +5,71 @@ import subprocess
 import shutil
 
 
+## Function for debug console.
+def Log(string):
+    print("Site Deployer: " + string)
+
+
+
+## Preparation function
+def preparation():
+
+    # Check deploy gate dir.
+    if not os.path.isdir("./dist"):
+        Log("Dist directory does not exists.")
+        os.mkdir("./dist")
+        Log("Created distribution directory.")
+
+    if not os.path.isdir("./node_modules"):
+        Log("Node requirements are not installed.")
+        try:
+            subprocess.call(["yarn", "install"])
+        except:
+            Log("Failed to run yarn install.")
+            Log("Node.js and Yarn haven't installed?")
+            exit(1)
+
+
+
+class Compiler():
+
+    def compile_pug(self):
+        target_pages = [
+            "index.pug"
+        ]
+
+        Log("Compiling pug...")
+        for page in target_pages:
+            try:
+                output = subprocess.check_output(["./node_modules/.bin/pug", page, "./dist/"])
+            except:
+                Log("Failed to exec builder!")
+                Log("You may not install pug and pug-cli.")
+                exit(1)
+
+
+    def compile_sass(self):
+        Log("Compiling sass...")
+        try:
+            output = subprocess.check_output(["./node_modules/.bin/node-sass", "./styles/site.scss", "./dist/styles/site.css"])
+        except:
+            Log("Failed to exec builder!")
+            Log("You may not install node-sass.")
+            exit(1)
+
+
+
 if __name__ == "__main__":
-    try:
-        print("Compiling pug...")
-        output = subprocess.check_output(["./node_modules/.bin/pug", "index.pug"])
-    except:
-        print("Failed to exec builder!")
-        exit(1)
+
+    # Preparing to build.
+    preparation()
 
 
-    print("Making distribution...")
+    # Compile
+    compiler = Compiler()
 
-    try:
-        shutil.move("./index.html", "./dist/")
-    except:
-        os.remove("./dist/index.html")
-        shutil.move("./index.html", "./dist/")
+    compiler.compile_pug()
+    compiler.compile_sass()
 
-    print("Completed!")
+
+    Log("Completed!")
