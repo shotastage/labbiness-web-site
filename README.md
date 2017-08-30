@@ -1,5 +1,7 @@
 # HappinessLab Landing Site
 
+>> Debug page is [here](http://hplab2test0page.uijin.com/).
+
 Official homepage of HappinessLab.
 
 # Pillars of Design
@@ -25,6 +27,8 @@ Official homepage of HappinessLab.
 - [http://coneflowercreamery.com](http://coneflowercreamery.com/)
 
 - [https://wantedlyinc.com/ja](https://wantedlyinc.com/ja)
+
+- [https://stripe.com](https://stripe.com/jp)
 
 
 # For developers
