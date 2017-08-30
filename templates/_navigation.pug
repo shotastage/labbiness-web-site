@@ -1,4 +1,33 @@
-/*
-    Copyright (c) 2017 HappinessLab.
-    Created by Shota Shimazu on 2017/08/30
-*/
+//
+//    Copyright (c) 2017 HappinessLab.
+//    Created by Shota Shimazu on 2017/08/30
+//
+
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href="#") HappinessLab
+    button.navbar-toggler(
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation")
+
+        span.navbar-toggler-icon
+
+
+    .collapse.navbar-collapse#navbarSupportedContent
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+                a.nav-link(href="#") Home
+                    span.sr-only (current)
+
+            li.nav-item
+                a.nav-link(href="#") Link
+            li.nav-item
+                a.nav-link.disabled(href="#") Disabled
+
+        form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type="text" placeholder="Search" aria-label="Search")
+            button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
