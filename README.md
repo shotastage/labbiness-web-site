@@ -23,3 +23,10 @@ Official homepage of HappinessLab.
 - [https://thesocietyinc.com.au](https://thesocietyinc.com.au/)
 
 - [http://coneflowercreamery.com](http://coneflowercreamery.com/)
+
+- [https://wantedlyinc.com/ja](https://wantedlyinc.com/ja)
+
+
+# For developers
+
+To develop this web site, you have to set up requirements listed below.
