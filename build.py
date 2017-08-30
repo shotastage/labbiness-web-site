@@ -41,7 +41,7 @@ class Compiler():
         Log("Compiling pug...")
         for page in target_pages:
             try:
-                output = subprocess.check_output(["./node_modules/.bin/pug", page, "./dist/"])
+                output = subprocess.check_output(["./node_modules/.bin/pug", page, "--out", "./dist/"])
             except:
                 Log("Failed to exec builder!")
                 Log("You may not install pug and pug-cli.")
