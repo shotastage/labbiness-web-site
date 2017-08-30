@@ -10,7 +10,7 @@ Official homepage of HappinessLab.
 
 - Mega navigation menu
 
-And our design guide is below list.
+**And our design guide is below list.**
 
 - [http://photoshopvip.net/103809](http://photoshopvip.net/103809)
 
