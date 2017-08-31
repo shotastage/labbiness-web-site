@@ -67,6 +67,10 @@ class Compiler():
 
 
 
+class Deploy():
+
+    def check(self):
+        pass
 
 
 if __name__ == "__main__":
