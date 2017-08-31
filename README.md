@@ -41,3 +41,20 @@ You have to install these components to compile and build this website.
 Moreover, you also need to set up Python environment to deploy built package.
 Thus, initially you need modern operating system that is able to run Node.js and Python3.
 Especially, UNIX-like operating system such as macOS and Ubuntu.
+
+
+## Debug Script
+
+`build.py` is debug and build script for this web site.
+
+### Usage
+```
+--production
+    Build and deploy for production.
+
+--debug-upload
+    Build and deploy web site to debugging server.
+
+--no-open
+    Do not open built web site in Chrome.
+```

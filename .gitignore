@@ -1,1 +1,7 @@
 node_modules/
+
+# Editor settings
+.vscode/
+
+# Dirs
+/dist/assets/
