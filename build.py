@@ -85,7 +85,15 @@ class DebugUtils():
 
     def open_in_safari(self):
         Log("Opening in Chrome...")
-        subprocess.call(["open", "-a", "Google Chrome", os.curdir + "/dist/index.html"])
+        subprocess.call(["open", "--disable-cache", "Google Chrome", os.curdir + "/dist/index.html"])
+
+    def watch_src(self):
+        try:
+            import pyinotify
+        except:
+            Log("Failed to import pyinotify!", withError = True)
+            Log("Please install pyinotify.", withError = True)
+
 
 
 
@@ -103,28 +111,36 @@ if __name__ == "__main__":
     except:
         SCRIPT_MODE = "Always"
 
-    # Clean
-    clean()
 
-    # Preparing to build.
-    preparation()
-
-
-    # Compile
+    # Instaces
+    debugger = DebugUtils()
     compiler = Compiler()
+    deployer = Deploy()
 
-    compiler.compile_pug()
-    compiler.compile_sass()
-    compiler.create_assets()
+
+    def build_flow():
+        # Clean
+        clean()
+
+        # Preparing to build.
+        preparation()
+
+        # Compile
+        compiler.compile_pug()
+        compiler.compile_sass()
+        compiler.create_assets()
 
 
     if SCRIPT_MODE == "--production":
-        deployer = Deploy()
+        build_flow()
     elif SCRIPT_MODE == "--debug-upload":
+        build_flow()
         # Upload
         pass
+    elif SCRIPT_MODE == "--watch":
+        debugger.watch_src()
     else:
-        debugger = DebugUtils()
+        build_flow()
 
         if not SCRIPT_MODE == "--no-open":
             debugger.open_in_chrome()

@@ -5,18 +5,27 @@
 
 
 // Variables
-$hp_navabr_height: 70px;
+$hp_navabr_margin: 50px;
 
 
 
 .hp_navbar {
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: $hp_navabr_height;
-    background: red;
+    margin: $hp_navabr_margin !important;
+
 }
 
+.hp_navbar_list {
+    overflow: auto;
+    list-style-type: none !important;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
 
 .hp_navbar_brand {
     font-family: 'Comfortaa', cursive;

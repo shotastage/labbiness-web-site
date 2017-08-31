@@ -49,6 +49,9 @@ Especially, UNIX-like operating system such as macOS and Ubuntu.
 
 ### Usage
 ```
+No option
+    Only build web site and open in Chrome.
+
 --production
     Build and deploy for production.
 
@@ -57,4 +60,7 @@ Especially, UNIX-like operating system such as macOS and Ubuntu.
 
 --no-open
     Do not open built web site in Chrome.
+
+--watch
+    Watch and build source tree in real time.
 ```

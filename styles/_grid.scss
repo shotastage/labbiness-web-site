@@ -1,0 +1,26 @@
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/09/01
+*/
+
+// 6 Based Grid System
+
+
+// Variables
+$hp_grid_margin: 0;
+
+
+.row {
+    display: flex;
+    margin-left: -1 * $hp_grid_margin;
+}
+
+.col {
+    width: 100%;
+    margin-left: -1 * $hp_grid_margin;
+}
+
+
+.containers {
+    //
+}
