@@ -1,0 +1,23 @@
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/08/31
+*/
+
+
+// Variables
+$hp_navabr_height: 70px;
+
+
+
+.hp_navbar {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: $hp_navabr_height;
+    background: red;
+}
+
+
+.hp_navbar_brand {
+    font-family: 'Comfortaa', cursive;
+}

@@ -1,2 +1,20 @@
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/08/30
+*/
 .test {
   display: none; }
+
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/08/31
+*/
+.hp_navbar {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background: red; }
+
+.hp_navbar_brand {
+  font-family: 'Comfortaa', cursive; }

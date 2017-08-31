@@ -31,11 +31,19 @@ def preparation():
 
 
 
+# Cleaner
+def clean():
+    Log("Cleaning source tree.")
+    if os.path.isdir("./dist"):
+        shutil.rmtree("./dist/")
+
+
 class Compiler():
 
     def compile_pug(self):
         target_pages = [
-            "index.pug"
+            "index.pug",
+            "debug.pug",
         ]
 
         Log("Compiling pug...")
@@ -62,6 +70,9 @@ class Compiler():
 
 
 if __name__ == "__main__":
+
+    # Clean
+    clean()
 
     # Preparing to build.
     preparation()
