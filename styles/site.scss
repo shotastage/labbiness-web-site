@@ -5,15 +5,11 @@
 
 @charset "utf-8";
 
-.test {
-    display: none;
-}
-
+// Debug
+@import "fonts";
+@import "debug";
 
 @import "normalize";
 @import "grid";
 @import "navabr";
 @import "top-screen";
-
-
-@import "debug";

@@ -4,8 +4,28 @@
 */
 
 
+// Variables
+$hp_icon_margin: 50px;
+
+
+// Styles
 .hp_top_screen {
     height: 100vh;
     width: 100%;
-    background: red;
+    background: #F0F0F0;
+}
+
+.top-icon {
+    margin-top: $hp_icon_margin;
+    margin-left: $hp_icon_margin;
+}
+
+.top-message {
+    height: 614.4px;
+    background: blue;
+    font-size: 8.7rem;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 7px;
+    word-wrap: break-word;
+    color: #34393F;
 }
