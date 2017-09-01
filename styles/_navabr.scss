@@ -11,11 +11,11 @@ $hp_navabr_margin: 50px;
 
 .hp_navbar {
     margin: $hp_navabr_margin !important;
-
 }
 
 .hp_navbar_list {
-    overflow: auto;
+    //overflow: auto;
+    display: flex;
     list-style-type: none !important;
 
     a {

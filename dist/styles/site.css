@@ -416,7 +416,7 @@ template {
   margin: 50px !important; }
 
 .hp_navbar_list {
-  overflow: auto;
+  display: flex;
   list-style-type: none !important; }
   .hp_navbar_list a {
     text-decoration: none; }

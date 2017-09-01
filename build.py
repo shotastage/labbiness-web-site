@@ -19,7 +19,6 @@ def preparation():
 
     # Check deploy gate dir.
     if not os.path.isdir("./dist"):
-        Log("Dist directory does not exists.")
         os.mkdir("./dist")
         Log("Created distribution directory.")
 
@@ -54,8 +53,8 @@ class Compiler():
             try:
                 output = subprocess.check_output(["./node_modules/.bin/pug", page, "--out", "./dist/"])
             except:
-                Log("Failed to exec builder!", withError = True)
-                Log("You may not install pug and pug-cli.", withError = True)
+                Log("Failed to compile Pug!", withError = True)
+                Log("You may not install pug and pug-cli?", withError = True)
                 exit(1)
 
 
@@ -64,8 +63,8 @@ class Compiler():
         try:
             output = subprocess.check_output(["./node_modules/.bin/node-sass", "./styles/site.scss", "./dist/styles/site.css"])
         except:
-            Log("Failed to exec builder!", withError = True)
-            Log("You may not install node-sass.", withError = True)
+            Log("Failed to compile Sass!", withError = True)
+            Log("You may not install node-sass?", withError = True)
             exit(1)
 
     def create_assets(self):
