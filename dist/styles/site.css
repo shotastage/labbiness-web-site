@@ -455,7 +455,7 @@ template {
 .hp_top_screen {
   height: 100vh;
   width: 100%;
-  background: #F0F0F0; }
+  background: #F5F7FA; }
 
 .top-icon {
   margin-top: 50px;
@@ -463,7 +463,6 @@ template {
 
 .top-message {
   height: 614.4px;
-  background: blue;
   font-size: 8.7rem;
   font-family: 'Fredoka One', cursive;
   letter-spacing: 7px;
