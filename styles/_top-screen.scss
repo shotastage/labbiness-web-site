@@ -21,11 +21,13 @@ $hp_icon_margin: 50px;
 }
 
 .top-message {
+    display: table-cell;
     height: 614.4px;
-    //background:;
-    font-size: 8.7rem;
+    background:blue;
+    font-size: 7.3rem;
     font-family: 'Fredoka One', cursive;
     letter-spacing: 7px;
     word-wrap: break-word;
     color: #34393F;
+    vertical-align: middle;
 }
