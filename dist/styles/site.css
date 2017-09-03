@@ -11,6 +11,7 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+@import url("https://fonts.googleapis.com/css?family=Cabin");
 /*
     Copyright (c) 2017 HappinessLab.
     Created by Shota Shimazu on 2017/09/01
@@ -466,7 +467,8 @@ template {
   height: 614.4px;
   background: blue;
   font-size: 7.3rem;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Cabin', sans-serif;
+  font-weight: bold;
   letter-spacing: 7px;
   word-wrap: break-word;
   color: #34393F;
