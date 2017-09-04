@@ -6,6 +6,8 @@
 
 // Variables
 $hp_icon_margin: 50px;
+$hp_icon_size: 614.4px;
+$hp_top_msg_size: 4rem;
 
 
 // Styles
@@ -18,14 +20,22 @@ $hp_icon_margin: 50px;
 .top-icon {
     margin-top: $hp_icon_margin;
     margin-left: $hp_icon_margin;
+    width: $hp_icon_size;
+    height: $hp_icon_size;
 }
+
+
+.top-message-wrap {
+    display: table;
+    margin-top: $hp_icon_margin;
+}
+
 
 .top-message {
     display: table-cell;
-    height: 614.4px;
+    height: $hp_icon_size;
     background:blue;
-    font-size: 7.3rem;
-    //font-family: 'Fredoka One', cursive;
+    font-size: $hp_top_msg_size;
     font-family: 'Cabin', sans-serif;
     font-weight: bold;
     letter-spacing: 7px;
