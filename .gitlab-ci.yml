@@ -1,1 +1,39 @@
 # Temporary remove.
+image: ubuntu:16.10
+
+
+stages:
+  - Build
+
+
+node_build:
+  before_script:
+    # install ssh-agent
+    - 'which ssh-agent || ( apt-get update -y > /dev/null && apt-get install openssh-client -y > /dev/null )'
+    # run ssh-agent
+    - eval $(ssh-agent -s)
+    # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
+    #- ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - apt-get -y install expect > /dev/null
+    - 'expect -c "
+    spawn ssh-add <(echo "$SSH_PRIVATE_KEY")
+    expect \"Enter passphrase for /dev/fd/63:\"
+    send -- \"\n\"
+    expect \"Retype new password:\"
+    send -- \"\n\"
+    expect \"passwd: all authentication tokens updated successfully.\"
+    send -- \"exit\n\"
+    "'
+    # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
+    # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+
+
+  stage: Build
+  script:
+    - echo "CI script is now under development."
+
+  tags:
+    - node
