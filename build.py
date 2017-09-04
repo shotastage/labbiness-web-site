@@ -67,6 +67,50 @@ class Compiler():
             Log("You may not install node-sass?", withError = True)
             exit(1)
 
+
+    def create_js(self):
+
+        # Variables
+        script_string = ""
+
+
+        # JavaScript Libraries
+        Log("Reading JavaScript libraries....")
+        try:
+            libraries = os.listdir("./scripts/libs")
+        except:
+            Log("Failed to get JavaScripts!", withError = True)
+
+        Log("Generating minified libraries...")
+        for lib in libraries:
+            if ".js" in lib:
+                out = subprocess.check_output(["./node_modules/.bin/javascript-obfuscator", "./scripts/libs/" + lib , "--output", "tmp.js"])
+                with open("tmp.js", "r") as f:
+                    script_string += f.read()
+                    os.remove("tmp.js")
+
+
+        # Site Script
+        Log("Reading site scripts...")
+        try:
+            scripts = os.listdir("./scripts/")
+        except:
+            Log("Failed to get JavaScripts!", withError = True)
+
+        Log("Generating minified scripts...")
+        for js in scripts:
+            if ".js" in js:
+                out = subprocess.check_output(["./node_modules/.bin/javascript-obfuscator", "./scripts/" + js , "--selfDefending", "false", "--output", "tmp.js"])
+                with open("tmp.js", "r") as f:
+                    script_string += f.read()
+                    os.remove("tmp.js")
+
+
+        os.mkdir("./dist/script/")
+        with open("./dist/script/site.js", "w") as write_target:
+            write_target.write(script_string)
+
+
     def create_assets(self):
         Log("Creating assets pack....")
         try:
@@ -128,6 +172,7 @@ if __name__ == "__main__":
         compiler.compile_pug()
         compiler.compile_sass()
         compiler.create_assets()
+        compiler.create_js()
 
 
     if SCRIPT_MODE == "--production":
