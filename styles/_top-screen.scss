@@ -7,7 +7,7 @@
 // Variables
 $hp_icon_margin: 50px;
 $hp_icon_size: 614.4px;
-$hp_top_msg_size: 4rem;
+$hp_top_msg_size: 6rem;
 
 
 // Styles
@@ -34,7 +34,6 @@ $hp_top_msg_size: 4rem;
 .top-message {
     display: table-cell;
     height: $hp_icon_size;
-    background:blue;
     font-size: $hp_top_msg_size;
     font-family: 'Cabin', sans-serif;
     font-weight: bold;

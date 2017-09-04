@@ -471,8 +471,7 @@ template {
 .top-message {
   display: table-cell;
   height: 614.4px;
-  background: blue;
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: 'Cabin', sans-serif;
   font-weight: bold;
   letter-spacing: 7px;
