@@ -3,6 +3,12 @@
     Created by Shota Shimazu on 2017/09/05
 */
 
+.hp_section_header {
+    top: 20px;
+    margin: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 h1.hp_section_header{
     font-size: 6rem;
 }
@@ -26,5 +32,10 @@ h5.hp_section_header {
 
 .hp_section_product {
     background: #EC87C0;
+    color: #fff;
+}
+
+.hp_section_about_us {
+    background: #4A90E9;
     color: #fff;
 }

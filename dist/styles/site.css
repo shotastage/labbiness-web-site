@@ -12,6 +12,7 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
 @import url("https://fonts.googleapis.com/css?family=Cabin");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 /*
     Copyright (c) 2017 HappinessLab.
     Created by Shota Shimazu on 2017/09/01
@@ -505,6 +506,11 @@ html {
     Copyright (c) 2017 HappinessLab.
     Created by Shota Shimazu on 2017/09/05
 */
+.hp_section_header {
+  top: 20px;
+  margin: 20px;
+  font-family: 'Josefin Sans', sans-serif; }
+
 h1.hp_section_header {
   font-size: 6rem; }
 
@@ -522,6 +528,10 @@ h5.hp_section_header {
 
 .hp_section_product {
   background: #EC87C0;
+  color: #fff; }
+
+.hp_section_about_us {
+  background: #4A90E9;
   color: #fff; }
 
 /*
