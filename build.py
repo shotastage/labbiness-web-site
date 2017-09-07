@@ -4,6 +4,7 @@ import os
 import subprocess
 import shutil
 import sys
+import platform
 
 
 ## Function for debug console.
@@ -43,10 +44,11 @@ def clean():
 class Compiler():
 
     def compile_pug(self):
-        target_pages = [
-            "index.pug",
-            "debug.pug",
-        ]
+        target_pages = []
+
+        for pug_files in os.listdir(os.getcwd()):
+            if ".pug" in pug_files:
+                target_pages.append(pug_files)
 
         Log("Compiling pug...")
         for page in target_pages:
@@ -123,7 +125,23 @@ class Compiler():
 class DebugUtils():
     def open_in_chrome(self):
         Log("Opening in Chrome...")
-        subprocess.call(["open", "-a", "Google Chrome", os.curdir + "/dist/index.html"])
+
+        if platform.system() == "Darwin":
+            try:
+                subprocess.call(["open", "-a", "Google Chrome", os.curdir + "/dist/index.html"])
+            except:
+                Log("Failed to excute Chrome.", withError = True)
+        elif platform.system() == "Windows":
+            try:
+                subprocess.call(["start", "Google Chrome", os.curdir + "/dist/index.html"])
+            except:
+                Log("Failed to excute chrome running start chrome command.", withError = True)
+        elif platform.system() == "Linux":
+            try:
+                subprocess.call(["start", "Google Chrome", os.curdir + "/dist/index.html"])
+            except:
+                Log("Failed to excute chrome running start chrome command.", withError = True)
+
 
 
     def open_in_safari(self):
