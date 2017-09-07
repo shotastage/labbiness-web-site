@@ -34,6 +34,7 @@ node_build:
     - apt-get install -y nodejs npm
     - npm cache clean
     - npm install n -g
+    - apt-get install -y curl wget
     - n stable
     - ln -sf /usr/local/bin/node /usr/bin/node
     - node -v
