@@ -30,6 +30,22 @@ node_build:
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
 
+    # Setup node env.
+    - apt-get install -y nodejs npm
+    - npm cache clean
+    - npm install n -g
+    - n stable
+    - ln -sf /usr/local/bin/node /usr/bin/node
+    - node -v
+    - npm -v
+    - npm install -g yarn
+
+    # Setup Python env.
+    - python3 -v
+
+    # Check status.
+    - ./build.py --no-open
+
 
   stage: Build
   script:
