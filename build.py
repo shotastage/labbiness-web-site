@@ -5,6 +5,8 @@ import subprocess
 import shutil
 import sys
 import platform
+from multiprocessing import Pool
+
 
 
 ## Function for debug console.
@@ -196,10 +198,21 @@ if __name__ == "__main__":
         preparation()
 
         # Compile
-        compiler.compile_pug()
-        compiler.compile_sass()
-        compiler.create_assets()
-        compiler.create_js()
+
+        multiprocess_compiler = Pool(4)
+        a = multiprocess_compiler.apply_async(compiler.compile_pug, ())
+        b = multiprocess_compiler.apply_async(compiler.compile_sass, ())
+        c = multiprocess_compiler.apply_async(compiler.create_assets, ())
+        d = multiprocess_compiler.apply_async(compiler.create_js, ())
+
+        c.wait()
+        a.wait()
+        b.wait()
+        d.wait()
+        #compiler.compile_pug()
+        #compiler.compile_sass()
+        #compiler.create_assets()
+        #compiler.create_js()
 
 
     if SCRIPT_MODE == "--production":
