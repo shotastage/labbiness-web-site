@@ -531,6 +531,10 @@ h4.hp_section_header {
 h5.hp_section_header {
   font-size: 2rem; }
 
+.hp_section {
+  padding: 0;
+  width: 100%; }
+
 .hp_section_product {
   background: #EC87C0;
   color: #fff; }
