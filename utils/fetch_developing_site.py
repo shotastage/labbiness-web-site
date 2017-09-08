@@ -9,6 +9,11 @@ import subprocess
 import os
 import shutil
 
+try:
+    import pexpect
+except:
+    print("Failed to import pexpect. Please install pexpect before.")
+
 
 if __name__ == "__main__":
 
@@ -21,4 +26,4 @@ if __name__ == "__main__":
     if os.path.exists("./testing/"):
         shutil.rmtree("./testing")
 
-    subprocess.call()
+    subprocess.call(["git", "clone", "https://hplab.work/HpLab/web-site.git"])

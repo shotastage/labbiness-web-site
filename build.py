@@ -145,8 +145,12 @@ class DebugUtils():
 
 
     def open_in_safari(self):
-        Log("Opening in Chrome...")
-        subprocess.call(["open", "--disable-cache", "Google Chrome", os.curdir + "/dist/index.html"])
+        Log("Opening in Safari...")
+        subprocess.call(["open", "-a", "Safari", os.curdir + "/dist/index.html"])
+
+    def open_in_firefox(self):
+        Log("Opening in Firefox...")
+        subprocess.call(["open", "-a", "Firefox", os.curdir + "/dist/index.html"])
 
     def watch_src(self):
         try:
@@ -204,7 +208,11 @@ if __name__ == "__main__":
     else:
         build_flow()
 
-        if not SCRIPT_MODE == "--no-open":
-            debugger.open_in_chrome()
-
+        if SCRIPT_MODE == "--open-in-safari":
+            debugger.open_in_safari()
+        elif SCRIPT_MODE == "--open-in-firefox":
+            debugger.open_in_firefox()
+        else:
+            if not SCRIPT_MODE == "--no-open":
+                debugger.open_in_chrome()
     Log("Completed!")

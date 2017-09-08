@@ -63,4 +63,10 @@ No option
 
 --watch
     Watch and build source tree in real time.
+
+--open-in-safari
+    Build web site and open built page in Safari (macOS only)
+
+--open-in-firefox
+    Build web site and open built page in Firefox (currently macOS only)
 ```
