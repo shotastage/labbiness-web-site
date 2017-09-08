@@ -38,6 +38,8 @@ h5.hp_section_header {
 
 
 .hp_section {
+    overflow: hidden;
+    margin: 0;
     padding: 0;
     width: 100%;
 }
