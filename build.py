@@ -8,11 +8,16 @@ import platform
 
 
 ## Function for debug console.
-def Log(string, withError = False):
+def Log(string, withError = False, withNotify = False):
     if withError:
         print('\033[31mSite Deployer: ' + string + '\033[0m')
     else:
         print('\033[32mSite Deployer: \033[0m' + string)
+
+    if withNotify:
+        if platform.system() == 'Darwin':
+            os.system("osascript -e 'display notification \"" + "Site Deployer: " + string + "\"'")
+
 
 
 ## Preparation function
@@ -215,4 +220,4 @@ if __name__ == "__main__":
         else:
             if not SCRIPT_MODE == "--no-open":
                 debugger.open_in_chrome()
-    Log("Completed!")
+    Log("Completed!", withNotify = True)
