@@ -567,7 +567,7 @@ Created by Shota Shimazu on 2017/09/01
   bottom: 20px;
   width: 100%;
   text-align: center;
-  color: red; }
+  font-weight: bold; }
 
 body[data-aos-duration='50'] [data-aos], [data-aos][data-aos][data-aos-duration='50'] {
   transition-duration: 50ms; }
