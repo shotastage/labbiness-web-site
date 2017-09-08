@@ -1,0 +1,21 @@
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/09/05
+*/
+
+.footer {
+    position: relative;
+    height: 200px;
+    background: #4FC1E9;
+    color: #fff;
+    margin-top: -10px;
+    padding: 0;
+}
+
+.footer_copyright {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: red;
+}
