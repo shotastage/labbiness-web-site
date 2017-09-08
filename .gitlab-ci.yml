@@ -43,15 +43,11 @@ node_build:
 
     # Setup Python env.
     - apt install -y python3
-    - python3 -v
-
-    # Check status.
-    - ./build.py --no-open
-
 
   stage: Build
   script:
-    - echo "CI script is now under development."
+    # Check status.
+    - ./build.py --no-open
 
   tags:
     - node
