@@ -30,6 +30,7 @@ block contents
 
     .container-fluid
         .hp_section.hp_section_product(
+            id="product"
             avoid_data-aos="flip-left"
             avoid_data-aos-duration="1500"
         )
@@ -41,15 +42,17 @@ block contents
 
 
         .hp_section.hp_section_about_us(
+            id="about_us"
             avoid_data-aos="flip-left"
             avoid_data-aos-duration="1500"
         )
             h1.hp_section_header About Us
             .hp_card
-                h2 事業内容
-                p Webアプリケーションを用いた業務効率化システムの開発 ・ライフハック型SNSの開発
+                .hp_section_text_area
+                    h2 事業内容
+                    p Webアプリケーションを用いた業務効率化システムの開発 ・ライフハック型SNSの開発
 
-
+    //-
         .hp_section.hp_section_about_us(
             data-aos="flip-left"
             data-aos-duration="1500"
