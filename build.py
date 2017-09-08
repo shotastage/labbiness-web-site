@@ -63,7 +63,7 @@ class Compiler():
     def compile_sass(self):
         Log("Compiling sass...")
         try:
-            output = subprocess.check_output(["./node_modules/.bin/node-sass", "./styles/site.scss", "./dist/styles/site.css"])
+            output = subprocess.check_output(["./node_modules/.bin/node-sass", "--output-style", "compressed", "./styles/site.scss", "./dist/styles/site.css"])
         except:
             Log("Failed to compile Sass!", withError = True)
             Log("You may not install node-sass?", withError = True)
