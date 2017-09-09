@@ -128,6 +128,10 @@ class Compiler():
             Log("Failed to copy assets directory. ", withError = True)
 
 
+    def compress_svg(self):
+        pass
+
+
 
 class DebugUtils():
     def open_in_chrome(self):
