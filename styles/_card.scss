@@ -7,8 +7,24 @@
 .hp_card {
     //width: 350px;
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #ccc;
+    border-radius: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    transition: .3s;
+
+    &:hover {
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+        transform: scale(1.05,1.05);
+    }
+}
+
+.hp_card-gutter-left-half {
+    margin-left: 25px;
+}
+
+.hp_card-gutter-right-half {
+    margin-right: 25px;
 }
 
 .card-content {
@@ -26,20 +42,4 @@
     color: #333;
     font-size: 14px;
     line-height: 1.5;
-}
-
-.card-link {
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding: 20px;
-}
-
-.card-link a {
-    text-decoration: none;
-    color: #0bd;
-    margin: 0 10px;
-}
-
-.card-link a:hover {
-    color: #0090aa;
 }
