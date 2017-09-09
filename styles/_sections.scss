@@ -5,7 +5,7 @@
 
 .hp_section_header {
     top: 20px;
-    margin: 20px;
+    margin: 60px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -48,16 +48,22 @@ h5.hp_section_header {
 
 .hp_section_text_area {
     margin: 20px;
-    margin-left: 25px;
+    margin-left: 62px;
     font-size: 1.4rem;
 }
 
 .hp_section_product {
-    background: #EC87C0;
+    background: #F62459;
     color: #fff;
 }
 
 .hp_section_about_us {
-    background: #4A90E9;
+    background: #1B7EE0;
+    color: #fff;
+}
+
+
+.hp_section_contact {
+    background: #F9690E;
     color: #fff;
 }

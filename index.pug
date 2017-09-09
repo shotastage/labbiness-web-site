@@ -36,8 +36,15 @@ block contents
         )
             h1.hp_section_header Products
             .hp_card
-                .hp_section_text_area
-                    h2 We are now making something atractive!
+                .card-content
+                    h1.hp_card_title OpenPose
+                    p.card-text 人口知能
+
+                .card-link
+                    a(href="http://webcreatorbox.com/about") LINK
+
+            .hp_section_text_area
+                h2 We are now making something atractive!
 
 
 
@@ -47,34 +54,20 @@ block contents
             avoid_data-aos-duration="1500"
         )
             h1.hp_section_header About Us
-            .hp_card
-                .hp_section_text_area
-                    h2 事業内容
-                    p Webアプリケーションを用いた業務効率化システムの開発 ・ライフハック型SNSの開発
+            .hp_section_text_area
+                h2 Our Services
+                p Webアプリケーションを用いた業務効率化システムの開発 ・ライフハック型SNSの開発
 
-    //-
-        .hp_section.hp_section_about_us(
-            data-aos="flip-left"
-            data-aos-duration="1500"
+
+        .hp_section.hp_section_contact(
+            id="about_us"
+            avoid_data-aos="flip-left"
+            avoid_data-aos-duration="1500"
         )
-            h1 Members
-                .hp_card
-                    h1 Thoru Matsunaga
-                    h2 CEO and Cofunder
-                    p.
-                        INSIGHT is wonderful tool that will maximize your productivity.
-
-                    h1 Shota Shimazu
-                    h2 COO and Cofunder
-                    p.
-                        PINNA is the next generation geolocation based SNS that share your location with your friends in real time.
-                        But, this is now under construction.
-
-                    h1 Jinbo Kazuyuki
-                    h2 CTO and Cofunder
-                    p.
-                        PINNA is the next generation geolocation based SNS that share your location with your friends in real time.
-                        But, this is now under construction.
+            h1.hp_section_header Contact
+            .hp_section_text_area
+                h2 Mail
+                p contact@hplab.jp
 
 
     div#canvas-container

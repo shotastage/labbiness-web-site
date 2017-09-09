@@ -1,0 +1,45 @@
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/09/05
+*/
+
+
+.hp_card {
+    //width: 350px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.card-content {
+    padding: 8px;
+}
+
+.hp_card_title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.card-text {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 20px;
+}
+
+.card-link a {
+    text-decoration: none;
+    color: #0bd;
+    margin: 0 10px;
+}
+
+.card-link a:hover {
+    color: #0090aa;
+}
