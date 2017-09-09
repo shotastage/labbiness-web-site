@@ -5,7 +5,7 @@
 
 
 .hp_card {
-    //width: 350px;
+    height: 400px;
     background: #fff;
     border-radius: 0;
     margin-left: 50px;
@@ -38,8 +38,10 @@
     color: #333;
 }
 
-.card-text {
+.hp_card_text_area {
+    width: 80%;
     color: #333;
     font-size: 14px;
     line-height: 1.5;
+    margin: auto;
 }
