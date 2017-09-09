@@ -11,11 +11,13 @@
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    transition: .3s;
+    //transition: .3s;
 
     &:hover {
         box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
-        transform: scale(1.05,1.05);
+        //transform: scale(1.05, 1.05);
+        animation: wakeUp .3s ease-out forwards;
+        -webkit-animation: wakeUp .3s ease-out forwards;
     }
 }
 
@@ -41,7 +43,34 @@
 .hp_card_text_area {
     width: 80%;
     color: #333;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5;
     margin: auto;
 }
+
+
+// Card Hover Animation
+@keyframes wakeUp {
+    0% {
+        //transform: scale(0, 0);
+        color: #333;
+    }
+
+    100% {
+        //transform: scale(1.05, 1.05);
+        color: red !important;
+    }
+}
+
+@-webkit-keyframes wakeUp {
+    0% {
+        //transform: scale(0, 0);
+        color: #333;
+    }
+
+    100% {
+        //transform: scale(1.05, 1.05);
+        color: red !important;
+    }
+}
+

@@ -84,7 +84,7 @@ class Compiler():
 
 
         # JavaScript Libraries
-        Log("Reading JavaScript libraries....")
+        Log("Reading JavaScript libraries...")
         try:
             libraries = os.listdir("./scripts/libs")
         except:
@@ -121,7 +121,7 @@ class Compiler():
 
 
     def create_assets(self):
-        Log("Creating assets pack....")
+        Log("Creating assets pack...")
         try:
             shutil.copytree("./assets/", "./dist/assets/")
         except:

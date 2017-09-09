@@ -9,7 +9,11 @@
 @import "fonts";
 @import "debug";
 
+
+// Library Imports
 @import "normalize";
+@import "libs/aos/aos.scss";
+
 @import "grid";
 @import "base";
 @import "navabr";
@@ -19,7 +23,3 @@
 @import "footer";
 @import "warning_modal";
 @import "card";
-
-
-// Library Imports
-@import "libs/aos/aos.scss";
