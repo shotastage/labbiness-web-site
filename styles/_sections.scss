@@ -6,7 +6,18 @@
 .hp_section_header {
     top: 20px;
     margin: 60px;
+    margin-bottom: 30px;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.hp_section_heading_msg {
+    top: 0;
+    margin: 60px;
+    margin-top: 0;
+    margin-bottom: 60px !important;
+    margin-left: 62px;
+    font-size: 1.4rem;
 }
 
 
@@ -45,6 +56,18 @@ h5.hp_section_header {
 
     letter-spacing: 1.3px;
 }
+
+
+.hp_section_void {
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 700px;
+    background: red;
+}
+
 
 .hp_section_text_area {
     margin: 20px;

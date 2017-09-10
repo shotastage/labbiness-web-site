@@ -29,12 +29,22 @@ $hp_grid_gutter: 1rem;
 
 
 .row {
+    margin: 60px;
     box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
     flex-direction: row;
     //margin-right: (-1 * $hp_grid_margin);
     //margin-left: (-1 * $hp_grid_margin);
+}
+
+.row_NoMargin {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    //margin-right: (-1 * $hp_grid_margin);
+    //marg
 }
 
 .col {

@@ -7,7 +7,7 @@ extends templates/_layout.pug
 
 block contents
 
-    .row.hp_top_screen
+    .row_NoMargin.hp_top_screen
         .col
             object(
                 data-aos="fade-up"
@@ -34,6 +34,9 @@ block contents
         )
             h1.hp_section_header Products
 
+            .hp_section_heading_msg
+                h2 We are now making something atractive!
+
             .row
                 .col
                     .hp_card.hp_card-gutter-right-half(
@@ -44,8 +47,6 @@ block contents
                             h1.hp_card_title OpenPose
                             p.hp_card_text_area We are developing and researching pose inference that can be applied for motion interactive applications using AI technology.
 
-                        //-.card-link
-                            a(href="http://webcreatorbox.com/about") LINK
                 .col
                     .hp_card.hp_card-gutter-right-half.hp_card-gutter-left-half(
                         data-aos="zoom-in-up"
@@ -55,8 +56,6 @@ block contents
                             h1.hp_card_title Geolocation App
                             p.hp_card_text_area 位置情報を利用した便利で楽しいアプリケーションを開発中です。詳しくは情報は順次更新されます。
 
-                        //-.card-link
-                            a(href="http://webcreatorbox.com/about") LINK
                 .col
                     .hp_card.hp_card-gutter-left-half(
                         data-aos="zoom-in-down"
@@ -66,12 +65,9 @@ block contents
                             h1.hp_card_title Data Management
                             p.hp_card_text_area toB向けの生産性を"maximize"するプロダクト。詳細が決まり次第お伝えします。
 
-                        //-.card-link
-                            a(href="http://webcreatorbox.com/about") LINK
 
-
-            .hp_section_text_area
-                h2 We are now making something atractive!
+                //- Void Margin Area
+                .hp_sectioin_void
 
 
 
@@ -79,14 +75,50 @@ block contents
             id="about_us"
         )
             h1.hp_section_header About Us
-            .hp_section_text_area
-                p We are an organization to utilize research of information technology in the university for real society.
-                h2 Our Services
-                p Webアプリケーションを用いた業務効率化システムの開発 ・ライフハック型SNSの開発
+            .hp_section_heading_msg
+                h2 We are an organization to utilize research of information technology at the university to real society.
+
+            .row
+                .col
+                    .hp_card.hp_card-gutter-right-half(
+                        data-aos="zoom-in"
+                        data-aos-duration="800"
+                    )
+                        .card-content
+                            h1.hp_card_title 松永 融
+                            h2.hp_card_subtitle 代表 ビジネスサイド
+                            p.hp_card_text_area_small.
+                                慶應義塾大学総合政策学部在籍。
+                                職場での自身の仕事の捗らなさによる経験から、生産性を上げるにはどうしたらいいのかを日々考えるようになり、当団体設立に至る。チーム内では代表として主にサービス構想、会計と財務、営業を担当。「エンジニアサイドの優秀なパシリ」を目指して日々奔走中。
+
+
+                .col
+                    .hp_card.hp_card-gutter-right-half.hp_card-gutter-left-half(
+                        data-aos="zoom-in-up"
+                        data-aos-duration="800"
+                    )
+                        .card-content
+                            h1.hp_card_title 島津 翔太
+                            h2.hp_card_subtitle COO & Designer エンジニアサイド
+                            p.hp_card_text_area_small.
+                                慶應義塾大学環境情報学部在籍。村井純研究会所属。
+                                主にサービス設計/開発、全体のオペレーション管理、フロントエンドエンジニアリング、その他各種デザインを担当。大学では機械学習による芸術音楽生成を研究している。代表とは中高の同級生。
+
+                .col
+                    .hp_card.hp_card-gutter-left-half(
+                        data-aos="zoom-in-down"
+                        data-aos-duration="800"
+                    )
+                        .card-content
+                            h1.hp_card_title 神保 和行
+                            h2.hp_card_subtitle CTO & Researcher エンジニアサイド
+                            p.hp_card_text_area_small.
+                                慶應義塾大学環境情報学部在籍。村井純研究会所属。
+                                主にサービス設計/開発、技術的課題の解決、バックエンドエンジニアリング、人工知能技術の研究を担当。大学では最先端の機械学習技術及び数学を研究している。絵描きとして同人誌出版も手がけている。
 
 
         .hp_section.hp_section_contact(
-            id="about_us"
+            id="contact"
         )
             h1.hp_section_header Contact
             .row

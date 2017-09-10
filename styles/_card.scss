@@ -11,6 +11,7 @@
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    z-index: 100;
 
     &:hover {
         @include vendorPrefix(backface-visibility, hidden);
@@ -41,10 +42,26 @@
     color: #333;
 }
 
+.hp_card_subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
 .hp_card_text_area {
     width: 80%;
     color: #333;
     font-size: 1.4rem;
+    line-height: 1.5;
+    margin: auto;
+}
+
+
+.hp_card_text_area_small {
+    width: 80%;
+    color: #333;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin: auto;
 }
@@ -66,7 +83,55 @@ $scaling_tune: 1.1;
 }
 
 
+@-webkit-keyframes wakeUp {
+    0% {
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+
+    100% {
+        @include vendorPrefix(transform, scale($scaling_tune, $scaling_tune));
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+    }
+}
+
+
+@-moz-keyframes wakeUp {
+    0% {
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+
+    100% {
+        @include vendorPrefix(transform, scale($scaling_tune, $scaling_tune));
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+    }
+}
+
+
 @keyframes wakeDown {
+    0% {
+        @include vendorPrefix(transform, scale($scaling_tune, $scaling_tune));
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+    }
+
+    100% {
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+}
+
+
+@-webkit-keyframes wakeDown {
+    0% {
+        @include vendorPrefix(transform, scale($scaling_tune, $scaling_tune));
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+    }
+
+    100% {
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+}
+
+
+@-moz-keyframes wakeDown {
     0% {
         @include vendorPrefix(transform, scale($scaling_tune, $scaling_tune));
         box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
