@@ -1,0 +1,18 @@
+/*
+    Copyright (c) 2017 HappinessLab.
+    Created by Shota Shimazu on 2017/09/01
+*/
+
+$set-prefix: '' , -moz- , -webkit-, -ms-;
+
+@mixin vendorPrefix($name, $value) {
+    @each $prefix in $set-prefix {
+        #{$prefix}#{$name}: $value;
+    }
+}
+
+@mixin vendorPrefixOnValue($name, $value) {
+    @each $prefix in $set-prefix {
+        #{$name}: #{$prefix}$value;
+    }
+}
