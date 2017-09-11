@@ -30,16 +30,17 @@ $hp_grid_gutter: 1rem;
 
 .row {
     margin: 60px;
-    box-sizing: border-box;
+    //box-sizing: border-box;
     display: flex;
-    flex: 0 1 auto;
     flex-direction: row;
+    align-items:         center;
+    justify-content: space-around;
     //margin-right: (-1 * $hp_grid_margin);
     //margin-left: (-1 * $hp_grid_margin);
 }
 
 .row_NoMargin {
-    box-sizing: border-box;
+    //box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
     flex-direction: row;
@@ -51,4 +52,24 @@ $hp_grid_gutter: 1rem;
     flex: 1;
     width: 100%;
     //margin-left: $hp_grid_margin;
+}
+
+@media screen and (max-width: 1080px) {
+    .row {
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .row_NoMargin {
+        flex-direction: column;
+        //margin-right: (-1 * $hp_grid_margin);
+        //marg
+    }
+
+    .col {
+        //
+    }
 }

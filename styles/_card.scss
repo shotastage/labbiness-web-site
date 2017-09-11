@@ -8,8 +8,8 @@
     height: 400px;
     background: #fff;
     border-radius: 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    //margin-left: 50px;
+    //margin-right: 50px;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     z-index: 100;
 
@@ -33,6 +33,20 @@
 
 .hp_card-gutter-right-half {
     margin-right: 25px;
+}
+
+@media screen and (max-width: 1080px) {
+    .hp_card-gutter-left-half {
+        margin-left: 0;
+    }
+
+    .hp_card-gutter-right-half {
+        margin-right: 0;
+    }
+
+    .hp_card {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .card-content {
