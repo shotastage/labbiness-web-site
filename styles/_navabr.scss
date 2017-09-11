@@ -3,62 +3,93 @@
     Created by Shota Shimazu on 2017/08/31
 */
 
-
-// Variables
-$hp_navabr_margin: 50px;
-
-
+$hp_nav_margin: 2rem;
 
 .hp_navbar {
-    margin: $hp_navabr_margin !important;
+    display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-.hp_navbar_md, .hp_navbar_md {
+// h1
+.hp_nav_brand {
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+.nav_position_bottom {
+    position: fixed;
+}
+
+.hp_nav_brnad_logo {
+    height: 3rem;
+    width: 3rem;
+    margin-left: $hp_nav_margin;
+}
+
+// ul
+.hp_nav_menu {
+    display: flex;
+    margin-right: $hp_nav_margin;
+}
+
+
+.hp_nav_menu_md {
     display: none;
 }
 
-.hp_navbar_list {
-    //overflow: auto;
-    display: flex;
-    list-style-type: none !important;
-    justify-content: flex-end;
-    margin-right: 30px;
 
+.hp_nav_list {
+    margin-left: 3rem;
+    list-style: none;
 
     a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: 800;
         color: #333;
-        margin: 10px;
-
-        &:hover {
-            text-decoration: none;
-        }
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-decoration: none;
+        white-space: nowrap;
     }
 }
 
-@media screen and (max-width: 1070px) {
-    .hp_navbar, .hp_navbar_list, .hp_navbar_brand {
+
+@media screen and (max-width: 1070px){
+
+    .hp_navbar {
+        flex-direction: column;
+    }
+
+    .hp_nav_brand {
         display: none;
     }
 
-    .hp_navbar_md {
-        display: block;
-        height: 10px;
+    .hp_nav_brnad_logo {
+        margin-left: 0;
+        margin-top: 1rem;
     }
-}
 
+    .hp_nav_menu, .p_nav_list {
+        display: none;
+    }
 
-.hp_navbar_brand {
-    position: relative;
-}
+    .hp_nav_menu_md {
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .hp_nav_list {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        list-style: none;
 
-.hp_navbar_brand-object {
-    position: absolute;
-    height: 2.5rem;
-    left: 30px;
-    top: 7px;
-    bottom: 0;
+        a {
+            color: #333;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+    }
 }

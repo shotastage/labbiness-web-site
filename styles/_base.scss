@@ -9,6 +9,8 @@ html {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
 
     // Default font face.
     font-family: 'Roboto', sans-serif;
