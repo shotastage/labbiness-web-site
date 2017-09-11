@@ -14,6 +14,16 @@ $hp_nav_margin: 2rem;
 // h1
 .hp_nav_brand {
     margin-right: auto;
+    margin-left: 1rem;
+}
+
+.nav_position_bottom {
+    position: fixed;
+}
+
+.hp_nav_brnad_logo {
+    height: 3rem;
+    width: 3rem;
     margin-left: $hp_nav_margin;
 }
 
@@ -22,6 +32,12 @@ $hp_nav_margin: 2rem;
     display: flex;
     margin-right: $hp_nav_margin;
 }
+
+
+.hp_nav_menu_md {
+    display: none;
+}
+
 
 .hp_nav_list {
     margin-left: 3rem;
@@ -32,5 +48,48 @@ $hp_nav_margin: 2rem;
         font-weight: bold;
         font-size: 1.8rem;
         text-decoration: none;
+        white-space: nowrap;
+    }
+}
+
+
+@media screen and (max-width: 1070px){
+
+    .hp_navbar {
+        flex-direction: column;
+    }
+
+    .hp_nav_brand {
+        display: none;
+    }
+
+    .hp_nav_brnad_logo {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .hp_nav_menu, .p_nav_list {
+        display: none;
+    }
+
+    .hp_nav_menu_md {
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hp_nav_list {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        list-style: none;
+
+        a {
+            color: #333;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
     }
 }
