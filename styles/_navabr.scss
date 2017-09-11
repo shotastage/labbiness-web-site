@@ -39,11 +39,13 @@ $hp_navabr_margin: 50px;
     align-items: center;
     width: 100%;
     justify-content: flex-start;
+    flex-flow: wrap;
 }
 
 .hp_navbar_brand-object {
     position: absolute;
     align-items: center;
+    vertical-align: middle;
     left: 0;
     top: 0;
     bottom: 0;
