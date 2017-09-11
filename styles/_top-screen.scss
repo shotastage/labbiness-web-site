@@ -42,3 +42,43 @@ $hp_top_msg_size: 6rem;
     color: #34393F;
     vertical-align: middle;
 }
+
+
+
+@media screen and (max-width: 1530px) and (min-width: 1401px) {
+    .top-icon {
+        margin-top: 90px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .top-message {
+        font-size: 5.5rem;
+    }
+}
+
+// 1400
+@media screen and (max-width: 1400px) and (min-width: 1231px){
+    .top-icon {
+        margin-top: 90px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .top-message {
+        font-size: 5rem;
+    }
+}
+
+// 1230
+@media screen and (max-width: 1230px) and (min-width: 100px){
+    .top-icon {
+        margin-top: 90px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .top-message {
+        font-size: 4rem;
+    }
+}
