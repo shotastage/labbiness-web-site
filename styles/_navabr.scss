@@ -13,12 +13,17 @@ $hp_navabr_margin: 50px;
     margin: $hp_navabr_margin !important;
 }
 
+.hp_navbar_md, .hp_navbar_md {
+    display: none;
+}
+
 .hp_navbar_list {
     //overflow: auto;
     display: flex;
     list-style-type: none !important;
     justify-content: flex-end;
     margin-right: 30px;
+
 
     a {
         text-decoration: none;
@@ -33,9 +38,22 @@ $hp_navabr_margin: 50px;
     }
 }
 
+@media screen and (max-width: 1070px) {
+    .hp_navbar, .hp_navbar_list, .hp_navbar_brand {
+        display: none;
+    }
+
+    .hp_navbar_md {
+        display: block;
+        height: 10px;
+    }
+}
+
+
 .hp_navbar_brand {
     position: relative;
 }
+
 
 .hp_navbar_brand-object {
     position: absolute;
