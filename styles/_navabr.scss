@@ -3,62 +3,34 @@
     Created by Shota Shimazu on 2017/08/31
 */
 
-
-// Variables
-$hp_navabr_margin: 50px;
-
-
+$hp_nav_margin: 2rem;
 
 .hp_navbar {
-    margin: $hp_navabr_margin !important;
-}
-
-.hp_navbar_md, .hp_navbar_md {
-    display: none;
-}
-
-.hp_navbar_list {
-    //overflow: auto;
     display: flex;
-    list-style-type: none !important;
-    justify-content: flex-end;
-    margin-right: 30px;
+	justify-content: flex-end;
+	align-items: center;
+}
 
+// h1
+.hp_nav_brand {
+    margin-right: auto;
+    margin-left: $hp_nav_margin;
+}
+
+// ul
+.hp_nav_menu {
+    display: flex;
+    margin-right: $hp_nav_margin;
+}
+
+.hp_nav_list {
+    margin-left: 3rem;
+    list-style: none;
 
     a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: 800;
         color: #333;
-        margin: 10px;
-
-        &:hover {
-            text-decoration: none;
-        }
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-decoration: none;
     }
-}
-
-@media screen and (max-width: 1070px) {
-    .hp_navbar, .hp_navbar_list, .hp_navbar_brand {
-        display: none;
-    }
-
-    .hp_navbar_md {
-        display: block;
-        height: 10px;
-    }
-}
-
-
-.hp_navbar_brand {
-    position: relative;
-}
-
-
-.hp_navbar_brand-object {
-    position: absolute;
-    height: 2.5rem;
-    left: 30px;
-    top: 7px;
-    bottom: 0;
 }
