@@ -34,21 +34,13 @@ $hp_navabr_margin: 50px;
 }
 
 .hp_navbar_brand {
-    display: flex;
     position: relative;
-    align-items: center;
-    width: 100%;
-    justify-content: flex-start;
-    flex-flow: wrap;
 }
 
 .hp_navbar_brand-object {
     position: absolute;
-    align-items: center;
-    vertical-align: middle;
-    left: 0;
-    top: 0;
+    height: 2.5rem;
+    left: 30px;
+    top: 7px;
     bottom: 0;
-    margin: auto;
-    height: 2rem;
 }
