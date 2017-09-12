@@ -57,6 +57,8 @@ $hp_nav_margin: 2rem;
 
     .hp_navbar {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .hp_nav_brand {
@@ -74,21 +76,22 @@ $hp_nav_margin: 2rem;
 
     .hp_nav_menu_md {
         display: flex;
-        width: 100vw;
-        overflow-x: scroll;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
         margin-left: auto;
         margin-right: auto;
     }
 
     .hp_nav_list {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: auto;
+        margin-right: auto;
         list-style: none;
 
         a {
             color: #333;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             text-decoration: none;
             text-align: center;
         }
