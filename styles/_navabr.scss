@@ -74,8 +74,8 @@ $hp_nav_margin: 2rem;
 
     .hp_nav_menu_md {
         display: flex;
-        width: 100%;
-        overflow: scroll;
+        width: 100vw;
+        overflow-x: scroll;
         margin-left: auto;
         margin-right: auto;
     }

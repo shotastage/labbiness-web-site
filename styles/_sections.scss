@@ -90,3 +90,29 @@ h5.hp_section_header {
     background: #F9690E;
     color: #fff;
 }
+
+
+
+@media screen and (max-width: 1080px) {
+    .hp_section_header {
+        margin: 20px;
+    }
+
+
+    .hp_section_heading_msg {
+        margin: 20px;
+        margin-bottom: 40px !important;
+        margin-left: 30px;
+        font-size: 1.2rem;
+    }
+
+
+    h1.hp_section_header{
+        font-size: 5rem;
+    }
+
+
+    .hp_section_text_area {
+        margin-left: 32px;
+    }
+}
