@@ -8,7 +8,7 @@ if [ -e ./web-site/ ]; then
     rm -rf ./web-site/
 fi
 
-git clone https://hplab.work/HpLab/web-site.git
+git clone git@hplab.work:Labbiness/web-site.git
 
 cd ./web-site/
 mv ./dist/ ../
