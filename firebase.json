@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "dist",
+    "public/assets": "dist/assets",
+    "public/script": "dist/script",
+    "public/styles": "dist/styles",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/assets/**",
+      "**/configurations/**",
+      "**/contents/**",
+      "**/scripts/**",
+      "**/styles/**",
+      "**/templates/**",
+      "**/utils/**"
+    ]
+  }
+}

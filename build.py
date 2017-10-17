@@ -5,6 +5,7 @@ import subprocess
 import shutil
 import sys
 import platform
+from distutils import dir_util
 from multiprocessing import Pool
 
 
@@ -70,7 +71,7 @@ class Compiler():
     def compile_sass(self):
         Log("Compiling sass...")
         try:
-            output = subprocess.check_output(["./node_modules/.bin/node-sass", "--output-style", "compressed", "./styles/site.scss", "./dist/styles/site.css"])
+            output = subprocess.check_output(["./node_modules/.bin/node-sass", "--output-style", "compressed", "./styles/site.scss", "./dist/site.css"])
         except:
             Log("Failed to compile Sass!", withError = True)
             Log("You may not install node-sass?", withError = True)
@@ -119,11 +120,13 @@ class Compiler():
         with open("./dist/script/site.js", "w") as write_target:
             write_target.write(script_string)
 
+        shutil.copy2("./dist/script/site.js", "./dist/site.js")
+
 
     def create_assets(self):
         Log("Creating assets pack...")
         try:
-            shutil.copytree("./assets/", "./dist/assets/")
+            dir_util.copy_tree('./assets/', './dist/')
         except:
             Log("Failed to copy assets directory. ", withError = True)
 
