@@ -137,22 +137,22 @@ class Compiler():
 
 
 class DebugUtils():
-    def open_in_chrome(self):
+    def open_in_chrome(self, URL = os.curdir + "/dist/index.html"):
         Log("Opening in Chrome...")
 
         if platform.system() == "Darwin":
             try:
-                subprocess.call(["open", "-a", "Google Chrome", os.curdir + "/dist/index.html"])
+                subprocess.call(["open", "-a", "Google Chrome", URL])
             except:
                 Log("Failed to excute Chrome.", withError = True)
         elif platform.system() == "Windows":
             try:
-                subprocess.call(["start", "Google Chrome", os.curdir + "/dist/index.html"])
+                subprocess.call(["start", "Google Chrome", URL])
             except:
                 Log("Failed to excute chrome running start chrome command.", withError = True)
         elif platform.system() == "Linux":
             try:
-                subprocess.call(["start", "Google Chrome", os.curdir + "/dist/index.html"])
+                subprocess.call(["start", "Google Chrome", URL])
             except:
                 Log("Failed to excute chrome running start chrome command.", withError = True)
 
@@ -178,8 +178,8 @@ class DebugUtils():
 
 class Deploy():
 
-    def check(self):
-        pass
+    def deploy_to_firebase(self):
+        os.system("firebase deploy")
 
 
 if __name__ == "__main__":
@@ -232,6 +232,12 @@ if __name__ == "__main__":
         debugger.watch_src()
     else:
         build_flow()
+
+
+        if SCRIPT_MODE == "--deploy":
+            deployer.deploy_to_firebase()
+            debugger.open_in_chrome(URL = "https://labbiness.com")
+            exit(0)
 
         if SCRIPT_MODE == "--open-in-safari":
             debugger.open_in_safari()
