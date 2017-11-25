@@ -19,6 +19,7 @@ def Log(string, withError = False, withNotify = False):
 
     if withNotify:
         if platform.system() == 'Darwin':
+            os.system("say web site building successfully completed")
             os.system("osascript -e 'display notification \"" + "Site Deployer: " + string + "\"'")
 
 
